@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Group 5 DSA Project</title>
+</head>
+<body>
+  <div class="header">
+    <div class="members">
+     <p> MEMBERS: RYAN JAKE DAZ - ALMICO ANDES - GERALD MALTO</p>
+    </div>
+    <div class="groupAndTime">
+      <p>Group 5</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="data">
+      <div class="listbtn">
+        <div class="iconImgAdd">
+          <button id="addTask" class="btnListAdd">
+            <p>ADD</p> 
+          </button>
+          <button id="viewTask" class="btnListView">
+            <p>VIEW</p>
+          </button>
+          <button class="btnListDaily" id="dailyTask">
+            <p>DAILY</p>
+          </button>
+          <button class="btnListCgtry" id="addCtgry">
+            <p>ADD CATEGORY</p>
+          </button>
+        </div>
+        <div class="catgList">
+          <p>CATEGORY LIST</p>
+          <div class="listingOfcatg" id="listingOfcatg">
+          </div>
+        </div>
+      </div>
+      <div class="listInfo">
+        <div class="searchBar">
+          <div class="searchIcon">
+            <input type="search" name="" id="searchbtn" placeholder="Search Task....">
+          </div> 
+        </div>
+        <div class="viewList" id="viewLists">
+        </div>
+<!-- edit Task -->
+        <div class="editTask" id="editTaksWindow">
+          <div class="headerEditTask">
+            UPDATE TASK
+          </div>
+          <div class="EditInput">
+            <p>Task: </p>
+            <input type="text" name="Task" id="taskEditInfo">
+          </div>
+          <div class="editDateAndCatg">
+            <div class="EditDACInput">
+              <p>Date:</p> 
+              <input type="date" name="date" id="dateEditInfo">
+            </div>
+            <div class="EditDACInput">
+              <p>Categories :</p> 
+              <select name="" id="catgEditInfo"></select>
+            </div>
+          </div>
+          <div class="startAndEnd">
+            <div class="EditStarInput">
+              <p>Start Time :</p> 
+              <input type="time" name="" id="startInfo" class="startAndEndInput">
+            </div>
+            <div class="EditEndInput">
+              <p>End Time :</p> 
+              <input type="time" name="" id="endInfo" class="startAndEndInput">
+            </div>
+          </div>  
+          <div class="noteEdittask">
+            <p>Notes:</p>
+            <input type="text" name="" id="noteInfo">
+          </div> 
+          <div class="btnEdit">
+            <button id="updateCloseBtn">CLOSE</button>
+            <button id="updateEditBtn">UPDATE</button>
+          </div>
+        </div>
+<!-- add tasks -->
+        <div class="addTasks" id="windowForAddTasks">
+          <div class="xbtn">
+            <button class="closeWindow">
+              <span style='font-size:17px;'>&#10060;</span>
+            </button>
+          </div>
+          <div class="textTask">NEW TASK</div>
+          <div class="dataEntry">
+            <div class="enterTask">
+              <p>Add Task : </p>
+              <input type="text" name="" id="doTask">
+            </div>
+            <div class="entryCtgry">
+              <p>Categories : </p>
+              <select name="" id="ctgryies">
+              </select>
+            </div>
+            <div class="enterDates">
+              <div class="eDates">
+                <p>Due Date :</p>
+                <input type="date" name="" id="dateTask">
+              </div>
+              <div class="enterTime">
+                <div class="texttime">
+                  <p>Time :</p>
+                </div>
+                <div class="strtAndend">
+                  <div class="startTime"> 
+                    <p>Start :</p>
+                    <input type="time" name="" id="startTask">
+                  </div>
+                  <div class="endTime">
+                    <p>End :</p>
+                    <input type="time" name="" id="endTask">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="enterNotes">
+              <p>Notes:</p>
+              <input type="text" name="" id="notesTask">
+            </div>
+            <div class="clearAndAdd">
+              <button id="clearBtn">
+                CLEAR
+              </button>
+              <button id="saveBtn">
+                SAVE
+              </button>
+            </div>
+          </div>
+        </div>
+<!-- daily -->
+        <div class="dailyTasks" id="windowDailyTasks">
+          <div class="headerDailyTask">
+            <div class="dateSearch">
+              <div class="dateInput">
+                <p>Date :</p>
+                <input type="date" id="chooseDate">
+              </div>
+              <div class="title">
+                <p>DAILY</p>
+              </div>
+            </div>
+            <div class="xBtnDaily">
+              <button id="exitbtndaily">
+                <span style='font-size:17px;'>&#10060;</span>
+              </button>
+            </div>
+          </div>
+          <div class="bodyDaily">
+            <div class="innerBody" id="listDailys">
+            </div>
+          </div>
+        </div>
+<!-- category -->
+        <div class="addCtgry" id="windowAddCtgy">
+          <div class="xbtnc">
+            <p>ADD CATEGORY</p>
+            <button class="closeWindow" id="exitCatgry">
+              <span style='font-size:17px;'>&#10060;</span>
+            </button>
+          </div>
+          <div class="catInput">
+            <input type="text" id="enteredCategory" placeholder="Enter Categories..">
+          </div>
+          <div class="btnAddCat">
+            <button id="btnCategory">ADD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calendarList">
+      <div class="calendar">
+        <div class="months">
+          <button id="prevBtn">
+            <i class="fa fa-angle-left style="font-size:36px""></i>
+          </button>
+          <p id="monAndYear"></p>
+          <button id="nextBtn">
+            <i class="fa fa-angle-right"></i>
+          </button>
+        </div>
+        <div class="weeks">
+          <div class="days">Sun</div>
+          <div class="days">Mon</div>
+          <div class="days">Tue</div>
+          <div class="days">Wed</div>
+          <div class="days">Thu</div>
+          <div class="days">Fri</div>
+          <div class="days">Sat</div>
+        </div>
+        <div class="dates" id="dates">
+        </div>
+      </div>
+      <div class="stats">
+        <img src="/img/pin.png" alt="" class="pintask">
+        <div class="notes">
+          <img src="/img/note.png" alt="">
+        </div>
+        <div class="dataNotes">
+          <div class="taskAndDate">
+            <p id="notesDataTask">Task : </p>
+            <p id="notesDateTask">Date : </p>
+          </div>
+          <div class="timesNotes">
+            <p id="notesDataStime">Start Time :</p>
+            <p id="notesDataEtime">End Time : </p>
+          </div>
+          <div class="notesTaskData">
+            NOTE : 
+            <p id="noteDataInfoTask">    
+            </p>
+          </div>
+          <div class="remaingTimeandBtn">
+            <div class="rTime">
+              Remaining Time :
+              <p id="timeCd">00:00</p>
+            </div>
+            <div class="btnNotesTask">
+              <button id="btnstrtTime">Start</button>
+              <button id="btnendTime">Pause</button>
+              <button id="btnDone">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/scripts/main.js" type="module"></script>
+</body>
+</html>
